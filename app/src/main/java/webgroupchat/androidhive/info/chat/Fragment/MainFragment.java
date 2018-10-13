@@ -207,10 +207,14 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Sending message to web socket server
-                sendMessageToServer(utils.getSendMessageJSON(inputMsg.getText()
-                        .toString()));
-                // Clearing the input filed once message was sent
-                inputMsg.setText("");
+                String mes = inputMsg.getText().toString();
+                if (!"".equals(mes)) {
+                    sendMessageToServer(utils.getSendMessageJSON(mes));
+                    // Clearing the input filed once message was sent
+                    inputMsg.setText("");
+                }else{
+                    showToast("请输入内容");
+                }
             }
         });
         LinearLayoutManager layout = new TopLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
