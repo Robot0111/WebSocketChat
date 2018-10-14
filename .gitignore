@@ -1,18 +1,24 @@
 *.iml
 .gradle
 /local.properties
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+/.idea/*
 .DS_Store
 /build
 /captures
+
 .externalNativeBuild
 # Built application files
 *.apk
 *.ap_
 *.aab
-
+*.properties
+*.bat
+*.gradle
+/gradle/
+/gradlew
+/app/release/
+/app/libs/
+/app/proguard-rules.pro
 # Files for the ART/Dalvik VM
 *.dex
 
